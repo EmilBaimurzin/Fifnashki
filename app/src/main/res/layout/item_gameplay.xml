@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:background="@drawable/box">
+
+    <ImageView
+        android:id="@+id/imgSymbol"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"/>
+
+    <TextView
+        android:id="@+id/number"
+        style="@style/BasicText"
+        android:layout_width="17dp"
+        android:layout_height="17dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="6dp"
+        android:background="@drawable/bg_number"
+        android:textSize="8sp"
+        tools:text="15" />
+
+    <View
+        android:id="@+id/selection"
+        android:background="@drawable/bg_selected"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</FrameLayout>

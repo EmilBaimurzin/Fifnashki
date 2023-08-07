@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentMainMenu">
+
+    <fragment
+        android:id="@+id/fragmentMainMenu"
+        android:name="com.five.game.ui.main.FragmentMainMenu"
+        android:label="FragmentMain" >
+        <action
+            android:id="@+id/action_fragmentMainMenu_to_fragmentGameplay"
+            app:destination="@id/fragmentGameplay" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentGameplay"
+        android:name="com.five.game.ui.gameplay.FragmentGameplay"
+        android:label="FragmentGameplay" >
+        <action
+            android:id="@+id/action_fragmentGameplay_to_dialogWin"
+            app:destination="@id/dialogWin" />
+        <action
+            android:id="@+id/action_fragmentGameplay_to_dialogOnPause"
+            app:destination="@id/dialogOnPause" />
+    </fragment>
+    <dialog
+        android:id="@+id/dialogWin"
+        android:name="com.five.game.ui.dialogs.DialogWin"
+        android:label="DialogWin" >
+        <argument
+            android:name="time"
+            app:argType="integer" />
+    </dialog>
+    <dialog
+        android:id="@+id/dialogOnPause"
+        android:name="com.five.game.ui.dialogs.DialogOnPause"
+        android:label="DialogOnPause" />
+</navigation>

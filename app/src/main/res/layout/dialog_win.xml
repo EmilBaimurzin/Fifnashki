@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:background="@drawable/winner"
+        android:layout_height="300dp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintGuide_percent="0.5"
+            android:orientation="vertical"
+            android:id="@+id/ver"/>
+
+        <TextView
+            android:id="@+id/timer"
+            style="@style/BasicText"
+            android:layout_width="140dp"
+            android:layout_height="55dp"
+            android:background="@drawable/time"
+            android:textSize="20sp"
+            android:layout_marginTop="100dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="00:45:20" />
+
+        <com.five.game.core.library.CustomImageButton
+            android:id="@+id/restartButton"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/restart"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            app:layout_constraintEnd_toStartOf="@+id/ver"
+            app:layout_constraintTop_toBottomOf="@+id/timer" />
+
+        <com.five.game.core.library.CustomImageButton
+            android:id="@+id/closeButton"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/close"
+            app:layout_constraintStart_toStartOf="@+id/ver"
+            app:layout_constraintTop_toBottomOf="@+id/timer" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
